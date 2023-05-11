@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+
+a {
+    cursor: pointer;
+}
+
+#root{
+    margin-top: 100px;
+}
+body {
+    color: #222;
+}
+
+div.image {
+    text-align: center;
+}
+
+img {
+    /* height: 100%; */
+    /* width: 100%; */
+    max-width: 40%;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+main {
+    padding: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* section Header */
+/* section Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 9%;
+
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin-bottom: 70px;
+    align-items: center;
+    background-color:skyblue ;
+}
+
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header nav {
+    display: flex;
+    gap: 24px;
+}
+
+/* section logo & buttons  */
+header a.logo {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+.a-logout {
+    display: flex;
+    align-items: center;
+}
+
+.login-button{
+    padding: 6% 10%;
+    font-size: 1.4rem;
+}
+.register-button{
+    padding: 6% 10%;
+    font-size: 1.4rem;
+}
+
+
+/* section post */
+
+div.post {
+    grid-template-columns: .9fr 1.1fr;
+    display: grid;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 30px 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* To hide overflow when increasing size */
+    background-color: rgb(208, 229, 237);
+}
+.post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Increase size by 5% */
+    z-index: 1; /* To bring the hovered card on top */
+  }
+
+
+div.post div.texts h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+div.post div.texts a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+div.post p.info {
+    margin: 5px 0;
+    color: #888;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+div.post p.info a.author {
+    color: #333;
+}
+
+div.post p.summary {
+    margin: 10px 0;
+    line-height: 1.4rem;
+}
+
+form.login,
+form.register {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px 7px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    background-color: #555;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 0;
+}
+
+form.login h1,
+form.register h1 {
+    text-align: center;
+}
+
+div.post-page div.image {
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+div.post-page div.image img {
+    object-fit:contain;
+    object-position: center center;
+    width: 100%;
+}
+
+div.post-page a {
+    color: #333;
+    text-decoration: underline;
+}
+
+div.post-page h1 {
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+div.post-page time {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    color: #aaa;
+    margin: 10px 0;
+}
+
+div.post-page div.author {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+div.content p {
+    line-height: 1.7rem;
+    margin: 30px 0;
+}
+
+div.content li {
+    margin-bottom: 10px;
+}
+
+div.edit-row {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+    background-color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a svg {
+    height: 20px;
+}
+
+/* media query */
+
+@media screen and (max-width: 579px) {
+    header a.logo {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    .a-logout {
+        display: flex;
+        align-items: center;
+    }
+    
+    .login-button{
+        padding: 10% 15%;
+
+        font-size: 1.2rem;
+    }
+    .register-button{
+        padding: 10% 15%;
+        font-size: 1.2rem;
+    }
+    
+    div.texts{
+        width: 90%;
+    }
+    div.image{
+        width: 90%;
+        text-align: left;
+    }
+    div.post {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 30px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .a-logout{
+        padding: 2px;
+        font-size: 0.8rem;
+    }
+
+    header nav {
+        display: flex;
+        gap: 5px;
+    }
+    header{
+        justify-content: space-around;
+    }
+}
